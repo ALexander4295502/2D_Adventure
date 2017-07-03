@@ -1,6 +1,6 @@
 fileFormatVersion: 2
-guid: 21d7d8ed69af56c4798bfa79b02391d3
-timeCreated: 1498933030
+guid: f540e13b02e840b479c14cb758d92426
+timeCreated: 1499014525
 licenseType: Free
 TextureImporter:
   fileIDToRecycleName:
@@ -16,7 +16,8 @@ TextureImporter:
     21300018: Level_1_foreground_9
     21300020: Level_1_foreground_10
     21300022: Level_1_foreground_11
-    21300024: Level_1_foreground_main
+    21300024: Level_1_foreground_12
+    21300026: Level_1_foreground_13
   serializedVersion: 4
   mipmaps:
     mipMapMode: 0
@@ -40,7 +41,7 @@ TextureImporter:
   textureFormat: 1
   maxTextureSize: 2048
   textureSettings:
-    filterMode: 0
+    filterMode: -1
     aniso: -1
     mipBias: -1
     wrapMode: 1
@@ -91,7 +92,7 @@ TextureImporter:
         width: 16
         height: 13
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       tessellationDetail: 0
@@ -104,7 +105,7 @@ TextureImporter:
         width: 16
         height: 13
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       tessellationDetail: 0
@@ -117,7 +118,7 @@ TextureImporter:
         width: 16
         height: 13
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       tessellationDetail: 0
@@ -125,12 +126,12 @@ TextureImporter:
       name: Level_1_foreground_3
       rect:
         serializedVersion: 2
-        x: 143
-        y: 223
-        width: 28
-        height: 30
+        x: 122
+        y: 228
+        width: 11
+        height: 21
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       tessellationDetail: 0
@@ -138,12 +139,12 @@ TextureImporter:
       name: Level_1_foreground_4
       rect:
         serializedVersion: 2
-        x: 209
-        y: 227
-        width: 43
-        height: 23
+        x: 173
+        y: 201
+        width: 86
+        height: 44
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       tessellationDetail: 0
@@ -151,12 +152,12 @@ TextureImporter:
       name: Level_1_foreground_5
       rect:
         serializedVersion: 2
-        x: 293
-        y: 217
-        width: 37
-        height: 32
+        x: 11
+        y: 214
+        width: 14
+        height: 13
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       tessellationDetail: 0
@@ -164,12 +165,12 @@ TextureImporter:
       name: Level_1_foreground_6
       rect:
         serializedVersion: 2
-        x: 11
-        y: 214
+        x: 46
+        y: 213
         width: 14
         height: 13
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       tessellationDetail: 0
@@ -177,12 +178,12 @@ TextureImporter:
       name: Level_1_foreground_7
       rect:
         serializedVersion: 2
-        x: 46
+        x: 78
         y: 213
         width: 14
         height: 13
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       tessellationDetail: 0
@@ -190,12 +191,12 @@ TextureImporter:
       name: Level_1_foreground_8
       rect:
         serializedVersion: 2
-        x: 78
-        y: 213
-        width: 14
-        height: 13
+        x: 141
+        y: 218
+        width: 15
+        height: 19
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       tessellationDetail: 0
@@ -208,7 +209,7 @@ TextureImporter:
         width: 10
         height: 12
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       tessellationDetail: 0
@@ -221,7 +222,7 @@ TextureImporter:
         width: 10
         height: 12
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       tessellationDetail: 0
@@ -234,20 +235,33 @@ TextureImporter:
         width: 10
         height: 12
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: Level_1_foreground_main
+      name: Level_1_foreground_12
       rect:
         serializedVersion: 2
-        x: 0
-        y: 0
-        width: 1024
-        height: 123
+        x: 120
+        y: 200
+        width: 22
+        height: 15
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Level_1_foreground_13
+      rect:
+        serializedVersion: 2
+        x: 12
+        y: 0
+        width: 992
+        height: 146
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       tessellationDetail: 0

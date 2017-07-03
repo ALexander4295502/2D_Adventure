@@ -11,6 +11,8 @@ namespace UnityStandardAssets._2D
         [SerializeField] private bool m_AirControl = false;                 // Whether or not a player can steer while jumping;
         [SerializeField] private LayerMask m_WhatIsGround;                  // A mask determining what is ground to the character
 
+
+        private Transform playerGraphics;
         private Transform m_GroundCheck;    // A position marking where to check if the player is grounded.
         const float k_GroundedRadius = .2f; // Radius of the overlap circle to determine if grounded
         private bool m_Grounded;            // Whether or not the player is grounded.
@@ -27,6 +29,10 @@ namespace UnityStandardAssets._2D
             m_CeilingCheck = transform.Find("CeilingCheck");
             m_Anim = GetComponent<Animator>();
             m_Rigidbody2D = GetComponent<Rigidbody2D>();
+            playerGraphics = transform.FindChild("Body");
+            if(playerGraphics == null){
+                Debug.LogError("Cannot find player graphics.");
+            }
         }
 
 
@@ -42,6 +48,9 @@ namespace UnityStandardAssets._2D
                 if (colliders[i].gameObject != gameObject)
                     m_Grounded = true;
             }
+
+            Debug.Log("Ground?" + m_Grounded.ToString());
+
             m_Anim.SetBool("Ground", m_Grounded);
 
             // Set the vertical animation
@@ -106,9 +115,9 @@ namespace UnityStandardAssets._2D
             m_FacingRight = !m_FacingRight;
 
             // Multiply the player's x local scale by -1.
-            Vector3 theScale = transform.localScale;
+            Vector3 theScale = playerGraphics.localScale;
             theScale.x *= -1;
-            transform.localScale = theScale;
+            playerGraphics.localScale = theScale;
         }
     }
 }
