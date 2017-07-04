@@ -47,9 +47,11 @@
   </ItemGroup>
   <ItemGroup>
      <Compile Include="Assets\ArmRotation.cs" />
+     <Compile Include="Assets\ParticleManager.cs" />
      <Compile Include="Assets\Scripts\Manager\LevelLoader.cs" />
      <Compile Include="Assets\Scripts\Manager\Parallaxing.cs" />
      <Compile Include="Assets\Scripts\Manager\Tiling.cs" />
+     <Compile Include="Assets\Weapon.cs" />
  <Reference Include="UnityEngine.UI">
  <HintPath>D:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/GUISystem/UnityEngine.UI.dll</HintPath>
  </Reference>
