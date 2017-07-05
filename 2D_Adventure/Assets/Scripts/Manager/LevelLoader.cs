@@ -54,6 +54,7 @@ public class LevelLoader : MonoBehaviour {
 			if(ctp.color.Equals(c)){
 				GameObject go = Instantiate(ctp.prefabs[Random.Range(0, ctp.prefabs.Length - 1)], new Vector3(x-LevelMap.width/2, y-LevelMap.height/2.5f, 0), Quaternion.identity);
 				go.transform.parent = transform;
+				go.layer = 11; // platform layer
 				return;
 			}
 		}

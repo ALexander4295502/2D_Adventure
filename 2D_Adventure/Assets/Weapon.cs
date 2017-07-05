@@ -11,7 +11,7 @@ public class Weapon : MonoBehaviour {
 	float timeToFire = 0;
 
 	[SerializeField]
-	private GameObject projectile;
+	private GameObject theProjectile;
 
 	[SerializeField]
 	private Transform firePoint;
@@ -43,7 +43,7 @@ public class Weapon : MonoBehaviour {
 		Vector2 firePointPosition = new Vector2 (firePoint.position.x, firePoint.position.y);
 		Vector2 direction = (mousePosition - firePointPosition).normalized;
 		// RaycastHit2D hit = Physics2D.Raycast (firePointPosition, mousePosition-firePointPosition, 100, whatToHit);
-		GameObject _go = Instantiate(projectile, firePoint.position, Quaternion.identity);
+		GameObject _go = Instantiate(theProjectile, firePoint.position, Quaternion.identity);
 		_go.GetComponent<Rigidbody2D>().AddForce(direction*10f, ForceMode2D.Impulse);
 	}
 }

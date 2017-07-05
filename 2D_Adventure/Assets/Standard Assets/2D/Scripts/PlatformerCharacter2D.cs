@@ -29,7 +29,7 @@ namespace UnityStandardAssets._2D
             m_CeilingCheck = transform.Find("CeilingCheck");
             m_Anim = GetComponent<Animator>();
             m_Rigidbody2D = GetComponent<Rigidbody2D>();
-            playerGraphics = transform.FindChild("Body");
+            playerGraphics = transform.Find("Body");
             if(playerGraphics == null){
                 Debug.LogError("Cannot find player graphics.");
             }
@@ -48,8 +48,6 @@ namespace UnityStandardAssets._2D
                 if (colliders[i].gameObject != gameObject)
                     m_Grounded = true;
             }
-
-            Debug.Log("Ground?" + m_Grounded.ToString());
 
             m_Anim.SetBool("Ground", m_Grounded);
 
