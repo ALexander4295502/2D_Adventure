@@ -54,9 +54,18 @@
      <Compile Include="Assets\Scripts\Manager\Parallaxing.cs" />
      <Compile Include="Assets\Scripts\Manager\Tiling.cs" />
      <Compile Include="Assets\Weapon.cs" />
+     <Compile Include="Assets\WeaponShort.cs" />
+     <Compile Include="Assets\XWeaponTrail\Scripts\Spline.cs" />
+     <Compile Include="Assets\XWeaponTrail\Scripts\SplineControlPoint.cs" />
+     <Compile Include="Assets\XWeaponTrail\Scripts\VertexPool.cs" />
+     <Compile Include="Assets\XWeaponTrail\Scripts\XWeaponTrail.cs" />
+     <Compile Include="Assets\XWeaponTrail\Scripts\XWeaponTrailDemo.cs" />
      <None Include="Assets\NewSurfaceShader.shader" />
      <None Include="Assets\FullTiltBoogie\Helpers\readme.txt" />
      <None Include="Assets\Blood decal pack\readme.txt" />
+     <None Include="Assets\XWeaponTrail\readme.txt" />
+     <None Include="Assets\XWeaponTrail\Model\readme.txt" />
+     <None Include="Assets\XWeaponTrail\Shader\xft_displacement_screen.shader" />
  <Reference Include="UnityEngine.Analytics">
  <HintPath>/Applications/Unity/Unity.app/Contents/UnityExtensions/Unity/UnityAnalytics/UnityEngine.Analytics.dll</HintPath>
  </Reference>

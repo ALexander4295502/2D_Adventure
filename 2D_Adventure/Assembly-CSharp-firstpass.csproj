@@ -65,6 +65,9 @@
      <None Include="Assets\NewSurfaceShader.shader" />
      <None Include="Assets\FullTiltBoogie\Helpers\readme.txt" />
      <None Include="Assets\Blood decal pack\readme.txt" />
+     <None Include="Assets\XWeaponTrail\readme.txt" />
+     <None Include="Assets\XWeaponTrail\Model\readme.txt" />
+     <None Include="Assets\XWeaponTrail\Shader\xft_displacement_screen.shader" />
  <Reference Include="UnityEngine.Analytics">
  <HintPath>/Applications/Unity/Unity.app/Contents/UnityExtensions/Unity/UnityAnalytics/UnityEngine.Analytics.dll</HintPath>
  </Reference>

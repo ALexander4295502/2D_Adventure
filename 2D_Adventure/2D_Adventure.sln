@@ -5,6 +5,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "2D_Adventure", "Assembly-CS
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "2D_Adventure", "Assembly-CSharp.csproj", "{1374AFBD-7969-BF97-D0E3-2E19F3DC5C4B}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "2D_Adventure", "Assembly-CSharp-Editor.csproj", "{6FCCF634-25B6-936F-7098-6511BDB3E2EB}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -19,6 +21,10 @@ Global
 		{1374AFBD-7969-BF97-D0E3-2E19F3DC5C4B}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{1374AFBD-7969-BF97-D0E3-2E19F3DC5C4B}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{1374AFBD-7969-BF97-D0E3-2E19F3DC5C4B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6FCCF634-25B6-936F-7098-6511BDB3E2EB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6FCCF634-25B6-936F-7098-6511BDB3E2EB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6FCCF634-25B6-936F-7098-6511BDB3E2EB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6FCCF634-25B6-936F-7098-6511BDB3E2EB}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
