@@ -12,7 +12,12 @@ namespace UnityStandardAssets._2D
         [SerializeField] private LayerMask m_WhatIsGround;                  // A mask determining what is ground to the character
 
 
-        private Transform playerGraphics;
+        private Transform playerBodyGraphics;
+
+        private Transform playerArm;
+
+        public bool rotationEnable;
+
         private Transform m_GroundCheck;    // A position marking where to check if the player is grounded.
         const float k_GroundedRadius = .2f; // Radius of the overlap circle to determine if grounded
         private bool m_Grounded;            // Whether or not the player is grounded.
@@ -29,9 +34,13 @@ namespace UnityStandardAssets._2D
             m_CeilingCheck = transform.Find("CeilingCheck");
             m_Anim = GetComponent<Animator>();
             m_Rigidbody2D = GetComponent<Rigidbody2D>();
-            playerGraphics = transform.Find("Body");
-            if(playerGraphics == null){
+            playerBodyGraphics = transform.Find("Body");
+            if(playerBodyGraphics == null){
                 Debug.LogError("Cannot find player graphics.");
+            }
+            playerArm = transform.Find("Arm");
+            if(playerArm == null){
+                Debug.LogError("Cannot find player Arm");
             }
         }
 
@@ -80,8 +89,12 @@ namespace UnityStandardAssets._2D
                 // The Speed animator parameter is set to the absolute value of the horizontal input.
                 m_Anim.SetFloat("Speed", Mathf.Abs(move));
 
-                // Move the character
-                m_Rigidbody2D.velocity = new Vector2(move*m_MaxSpeed, m_Rigidbody2D.velocity.y);
+                if(!GetComponent<Animator>().GetCurrentAnimatorStateInfo(0).IsTag("Attack")){
+                    // Move the character
+                    m_Rigidbody2D.velocity = new Vector2(move*m_MaxSpeed, m_Rigidbody2D.velocity.y);
+                }else{
+                    m_Rigidbody2D.velocity = Vector2.zero;
+                }
 
                 // If the input is moving the player right and the player is facing left...
                 if (move > 0 && !m_FacingRight)
@@ -109,13 +122,24 @@ namespace UnityStandardAssets._2D
 
         private void Flip()
         {
-            // Switch the way the player is labelled as facing.
-            m_FacingRight = !m_FacingRight;
+            if(rotationEnable == true){
+                // Switch the way the player is labelled as facing.
+                m_FacingRight = !m_FacingRight;
 
-            // Multiply the player's x local scale by -1.
-            Vector3 theScale = playerGraphics.localScale;
-            theScale.x *= -1;
-            playerGraphics.localScale = theScale;
+                // Multiply the player's x local scale by -1.
+                Vector3 theScale = playerBodyGraphics.localScale;
+                theScale.x *= -1;
+                playerBodyGraphics.localScale = theScale;
+            }else {
+                // Switch the way the player is labelled as facing.
+                m_FacingRight = !m_FacingRight;
+
+                // Multiply the player's x local scale by -1.
+                Vector3 theScale = transform.localScale;
+                theScale.x *= -1;
+                transform.localScale = theScale;
+            }
+
         }
     }
 }

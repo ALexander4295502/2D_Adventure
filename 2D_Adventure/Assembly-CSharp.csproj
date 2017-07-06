@@ -53,6 +53,7 @@
      <Compile Include="Assets\Scripts\Manager\LevelLoader.cs" />
      <Compile Include="Assets\Scripts\Manager\Parallaxing.cs" />
      <Compile Include="Assets\Scripts\Manager\Tiling.cs" />
+     <Compile Include="Assets\SpearDustController.cs" />
      <Compile Include="Assets\Weapon.cs" />
      <Compile Include="Assets\WeaponShort.cs" />
      <Compile Include="Assets\XWeaponTrail\Scripts\Spline.cs" />
