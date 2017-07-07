@@ -47,7 +47,9 @@
   </ItemGroup>
   <ItemGroup>
      <Compile Include="Assets\ArmRotation.cs" />
+     <Compile Include="Assets\AudioManager.cs" />
      <Compile Include="Assets\FullTiltBoogie\RotateFlareHolder.cs" />
+     <Compile Include="Assets\GameMaster.cs" />
      <Compile Include="Assets\ParticleManager.cs" />
      <Compile Include="Assets\ScController.cs" />
      <Compile Include="Assets\Scripts\Manager\LevelLoader.cs" />
