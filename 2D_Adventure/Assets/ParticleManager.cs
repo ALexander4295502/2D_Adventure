@@ -7,8 +7,11 @@ public class ParticleManager : MonoBehaviour {
 	public GameObject projectile;
 	public GameObject trail;
 	public GameObject hit;
+	public float camShakeAmt = 0.05f;
+	public float camShakeLength = 0.1f;
 
 	public LayerMask whatToHit;
+	private CameraShake camShake;
 
 	private float beginTime;
 
@@ -18,6 +21,11 @@ public class ParticleManager : MonoBehaviour {
 		projectile.SetActive(true);
 		trail.SetActive(true);
 		hit.SetActive(false);
+		camShake = GameMaster.gm.GetComponent<CameraShake>();
+		if (camShake == null)
+		{
+			Debug.LogError("No CameraShake script found on GM object");
+		}
 	}
 	
 	// Update is called once per frame
@@ -44,9 +52,10 @@ public class ParticleManager : MonoBehaviour {
 			Destroy(gameObject, 1f);
 			gameObject.GetComponent<Rigidbody2D>().velocity = Vector2.zero;
 			gameObject.GetComponent<CircleCollider2D>().enabled = false;
+			AudioManager.instance.PlaySound("Wand_explosion");
+			camShake.Shake(camShakeAmt*2, camShakeLength);
 			if(other.CompareTag("Item")){
 				other.gameObject.GetComponent<ScController>().getHit(transform.position);
-				hit.transform.Find("Blood_Particle").gameObject.SetActive(true);
 			}
 		}
 	}
